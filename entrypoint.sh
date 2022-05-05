@@ -1,6 +1,8 @@
 #!/bin/sh -l
-pwd
 echo $GITHUB_WORKDIR
+
+mv /tests $GITHUB_WORKDIR/tests
+
 ls $GITHUB_WORKDIR
 
 time=$(date)
