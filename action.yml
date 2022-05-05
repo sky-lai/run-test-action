@@ -1,15 +1,13 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+name: 'Run Node.JS Tests'
+author: 'Sky'
+description: 'Test node code'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env: 
+    a: 'b'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.root-dir }}
+branding:
+  icon: 'check'
+  color: 'purple'
