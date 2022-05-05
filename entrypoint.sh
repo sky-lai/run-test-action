@@ -1,7 +1,8 @@
 #!/bin/sh -l
 echo $GITHUB_WORKDIR
 
-mv /tests $GITHUB_WORKDIR/tests
+mkdir ${GITHUB_WORKDIR}/tests
+mv /tests/* ${GITHUB_WORKDIR}/tests
 
 ls $GITHUB_WORKDIR
 
