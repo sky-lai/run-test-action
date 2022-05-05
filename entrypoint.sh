@@ -1,7 +1,7 @@
 #!/bin/sh -l
+pwd
+echo $GITHUB_WORKDIR
+ls $GITHUB_WORKDIR
 
-ls -al
-node test/index.js
-echo "Hello $1"
 time=$(date)
 echo "::set-output name=time::$time"
