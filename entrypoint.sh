@@ -19,9 +19,9 @@ echo 'ls ~/.ssh'
 ls ~/.ssh
 
 echo 'ls ~/.ssh/known_hosts'
-ls ~/.ssh/known_hosts
+cat ~/.ssh/known_hosts
 
 # clone tests repo
-# git clone $1 __test-repo
+git clone $1 __test-repo
 
-# ls
+ls
