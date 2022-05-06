@@ -2,17 +2,18 @@ name: 'Run tests.'
 author: 'Kuanwen Lai'
 description: 'This action let you run tests whitch is saved and managed on other repository.'
 inputs:
-  tests-repo-ssh-key: 
-    description: 'ssh key to access repository whitch you save your tests.'
+  test-cases-repo: 
+    description: 'The repository which you save your test cases. The format is the complete url used to clone a repo. Ex. "git@github.com:user/my-test-cases-repo.git" or "https://user:personal-access-token@github.com/user/my-test-cases-repo.git"'
     required: true
-
+  test-cases-repo-ssh-key: 
+    description: 'The ssh private key to access repository indicated by input "tests-repo". If you use git schema, you should set this input'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env: 
-    a: 'b'
   args:
-    - ${{ inputs.tests-repo-ssh-key }}
+    - ${{ inputs.test-cases-repo }}
+    - ${{ inputs.test-cases-repo-ssh-key }}
 branding:
   icon: 'check'
   color: 'purple'
