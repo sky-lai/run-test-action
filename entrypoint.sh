@@ -1,11 +1,6 @@
 #!/bin/sh -l
 echo $GITHUB_WORKDIR
 
-mkdir /testmkdir
-mv /testsabc123/* /testmkdir
-echo "/testmkdir"
-ls /testmkdir
-
 mkdir /github/testmkdir
 mv /testsabc123/* /github/testmkdir
 echo "/testmkdir"
