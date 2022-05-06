@@ -1,6 +1,11 @@
-name: 'Run Node.JS Tests'
-author: 'Sky'
-description: 'Test node code'
+name: 'Run tests.'
+author: 'Kuanwen Lai'
+description: 'This action let you run tests whitch is saved and managed on other repository.'
+inputs:
+  tests-repo-ssh-key: 
+    description: 'ssh key to access repository whitch you save your tests.'
+    required: true
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
