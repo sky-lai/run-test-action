@@ -11,8 +11,10 @@ echo $2
 
 # insert credential
 mkdir ~/.ssh
-mv /known_hosts ~/.ssh/known_hosts
+ssh-keyscan github.com >> ~/.ssh/known_hosts
 echo $2 >> ~/.ssh/id_rsa
+echo "cat ~/.ssh/id_rsa"
+cat ~/.ssh/id_rsa
 chmod u=rw,g=,o= ~/.ssh/id_rsa
 
 echo 'ls ~/.ssh'
