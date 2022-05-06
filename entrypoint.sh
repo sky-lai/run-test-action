@@ -8,12 +8,12 @@ echo "ls .. -al"
 ls .. -al
 
 echo "HOME<$HOME>"
-echo "GITHUB_WORKDIR:<$GITHUB_WORKDIR>"
+echo "GITHUB_WORKDIR:<$GITHUB_WORKSPACE>"
 
-mkdir ${GITHUB_WORKDIR}/tests
-mv /testsabc123/* ${GITHUB_WORKDIR}/tests
-echo "${GITHUB_WORKDIR}/tests"
-ls $GITHUB_WORKDIR
+mkdir ${GITHUB_WORKSPACE}/tests
+mv /testsabc123/* ${GITHUB_WORKSPACE}/tests
+echo "${GITHUB_WORKSPACE}/tests"
+ls $GITHUB_WORKSPACE
 
 time=$(date)
 echo "::set-output name=time::$time"
