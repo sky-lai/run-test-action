@@ -12,6 +12,13 @@ echo $2
 # insert credential
 mkdir ~/.ssh
 mv /known_hosts ~/.ssh/known_hosts
+
+echo 'ls ~/.ssh'
+ls ~/.ssh
+
+echo 'ls ~/.ssh/known_hosts'
+ls ~/.ssh/known_hosts
+
 echo $2 >> ~/.ssh/id_rsa
 chmod u=rw,g=,o= ~/.ssh/id_rsa
 
