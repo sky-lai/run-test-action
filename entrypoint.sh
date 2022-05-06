@@ -1,5 +1,14 @@
 #!/bin/sh -l
-echo $GITHUB_WORKDIR
+pwd
+echo "ls -al"
+ls -al
+
+echo ""
+echo "ls .. -al"
+ls .. -al
+
+echo "HOME<$HOME>"
+echo "GITHUB_WORKDIR:<$GITHUB_WORKDIR>"
 
 mkdir ${GITHUB_WORKDIR}/tests
 mv /testsabc123/* ${GITHUB_WORKDIR}/tests
