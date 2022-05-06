@@ -12,7 +12,7 @@ runs:
   env: 
     a: 'b'
   args:
-    - ${{ inputs.root-dir }}
+    - ${{ inputs.tests-repo-ssh-key }}
 branding:
   icon: 'check'
   color: 'purple'
