@@ -11,6 +11,6 @@ echo 'cat ~/.ssh/known_hosts'
 cat ~/.ssh/known_hosts
 
 # clone tests repo
-git clone $1 __test-repo
+git clone git@bitbucket.org:sky-lai/a-simple-api-test.git test-repo
 
 ls
