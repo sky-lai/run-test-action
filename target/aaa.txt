@@ -1,4 +1,0 @@
-bbb
-
-          test-cases-repo: ${{ secrets.PERFACT_GAME_TEST_REPOSITORY }}
-          test-cases-repo-ssh-key: ${{ secrets.PERFACT_GAME_TEST_REPOSITORY_DEPLOY_KEY }}
