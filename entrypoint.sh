@@ -1,26 +1,13 @@
 #!/bin/sh -l
 
-echo "\$0"
-echo $0
-
-echo "\$1"
-echo $1
-
-echo "\$2"
-echo $2
-
 # insert credential
 mkdir ~/.ssh
 ssh-keyscan github.com >> ~/.ssh/known_hosts
+ssh-keyscan bitbucket.org >> ~/.ssh/known_hosts
 echo $2 >> ~/.ssh/id_rsa
-echo "cat ~/.ssh/id_rsa"
-cat ~/.ssh/id_rsa
 chmod u=rw,g=,o= ~/.ssh/id_rsa
 
-echo 'ls ~/.ssh'
-ls ~/.ssh
-
-echo 'ls ~/.ssh/known_hosts'
+echo 'cat ~/.ssh/known_hosts'
 cat ~/.ssh/known_hosts
 
 # clone tests repo
