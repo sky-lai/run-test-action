@@ -14,7 +14,7 @@ echo $2 >> $HOME/.ssh/id_rsa
 chmod u=rw,g=,o= $HOME/.ssh/id_rsa
 
 GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=$HOME/.ssh/known_hosts -o StrictHostKeyChecking=no"
-echo GIT_SSH_COMMAND
+echo $GIT_SSH_COMMAND
 # clone tests repo
 git clone git@github.com:sky-lai/a-simple-api-tests.git __tests-cases
 ls
